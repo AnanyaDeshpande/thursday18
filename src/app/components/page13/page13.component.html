@@ -1,0 +1,261 @@
+
+<style>
+    body {
+      width: 100%;
+      font-size: 16px;
+      margin: 0;
+      padding: 0;
+      outline: none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+   } 
+
+
+   .id1 {
+      border: double 6px rgb(66, 64, 64);
+       outline: solid 2px rgb(68, 64, 64);
+       margin: 50px; 
+       margin-top:40px;
+       min-height: 60vh;
+       padding-left: 20px;
+       padding-right: 20px;
+       box-sizing: border-box;
+  }
+ 
+   #p1 input[type="text"] {
+       border: none;
+       background: none;
+       outline: none;
+       white-space: nowrap;
+       overflow: hidden;
+       text-overflow: ellipsis;
+       position: absolute;
+       /* width: 70%; */
+   }
+
+   table {
+      
+       width: 100%;
+       border: 1px solid black;
+       border-collapse: collapse;
+       margin-top: 20px; 
+       /* box-sizing: border-box; */
+   }
+
+   th, td {
+      
+       border: 1px solid black;
+       padding: 8px;
+   }
+
+   td input[type="text"] {
+       border: none;
+       background: none;
+       outline: none;
+       white-space: nowrap;
+       overflow: hidden;
+   }
+
+   .form-input {
+   width: 0%;
+   padding: 0.5px;
+   margin-left: 20px;
+   border: 0.5px solid #fff8f8;
+   /* border: 1px solid #c4bcbc; */
+   outline:none;
+   border-radius: 5px;
+   margin-bottom: 6px;
+ }
+
+   hr {
+       border-color: black;
+       margin-bottom: 20%;
+   }
+    
+   #p2 input[type="text"] {
+      border: none;
+       background: none;
+       outline: none;
+       white-space: nowrap;
+       overflow: hidden;
+       text-overflow: ellipsis;
+       position: absolute;
+       /* width: 70%; */
+   }
+
+   #p2 p input[type="text"] {
+      border: none;
+       background: none;
+       outline: none;
+       white-space: nowrap;
+       overflow: hidden;
+       text-overflow: ellipsis;
+       position: absolute;
+       /* width: 70%; */
+   }
+
+   #nk{
+           border: none;
+           outline: none;
+           font-size: 15px;
+       }
+
+       #b1 a{
+       position: relative;
+           left: 48%;
+           text-decoration: none;
+           border: 2px double rgb(100, 97, 97);
+           border-radius: 3px;
+           padding-left: 9px;
+           padding-right: 9px;
+        }
+        #b1 #b2{
+       position: relative;
+           left: 48%;
+           text-decoration: none;
+           border: 2px double rgb(100, 97, 97);
+           border-radius: 3px;
+           padding-left: 9px;
+           padding-right: 9px;
+        } 
+
+        .image-container {
+ position: relative;
+ display: inline-block;
+ margin-top: 10px ;
+ left:69%;
+
+}
+.remove-button {
+ position: absolute;
+ top: 2px;
+ right: 2px;
+ cursor: pointer;
+ color: rgb(219, 34, 34);
+ font-weight: bold;
+ font-size: 14px;
+ background: rgb(209, 83, 83);
+ border-radius: 50%;
+ /* padding: 2px; */
+ opacity: 0; /* Initially hidden */
+ transition: opacity 0.3s; 
+}
+
+.remove-button:hover {
+ opacity: 1; /* Visible on hover */
+}
+
+.form-input {
+ width: 20%;
+ /* Add other styles for the file input if needed */
+}
+</style>
+
+<body>
+   <div class="id1">
+       <form action="" [formGroup]="formData" (ngSubmit)="onSubmit()">
+    
+                 <h1>Medication provided during treatment : Psychiatric</h1>
+
+                 <table class="w-full text-left">
+                   <thead>
+                       <tr>
+                           <th class="pb-2 border-b-2">Date</th>
+                           <th class="pb-2 border-b-2">Complaint</th>
+                           <th class="pb-2 border-b-2">Medication / Reasons for continuing / Change of Medications</th>
+                           <th class="pb-2 border-b-2">Signature</th>
+                       </tr>
+                   </thead>
+                   <tbody>
+                       
+                       <tr>
+                           <td class="border px-4 py-2" contenteditable="true" ><input type="date" id="rc1" formControlName="rc1" style="width: 250px; border: none;"/></td>
+                           <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc2" formControlName="rc2" style="width: 250px;border: none;" /></td>
+                           <td class="border px-4 py-2" contenteditable="true" ><input type="text" id="rc3" formControlName="rc3" style="width: 250px;border: none;"/></td>
+                           <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc4" formControlName="rc4" style="width: 250px;border: none;"/></td>
+                       </tr>
+                         <tr>
+                           <td class="border px-4 py-2" contenteditable="true" ><input type="date" id="rc5" formControlName="rc5"style="width: 250px;border: none;" /></td>
+                           <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc6" formControlName="rc6" style="width: 250px;border: none;"/></td>
+                           <td class="border px-4 py-2" contenteditable="true" ><input type="text" id="rc7" formControlName="rc7" style="width: 250px;border: none;"/></td>
+                           <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc8" formControlName="rc8" style="width: 250px;border: none;"/></td>
+                       </tr>
+                         <tr>
+                           <td class="border px-4 py-2" contenteditable="true" ><input type="date" id="rc9" formControlName="rc9" style="width: 250px;border: none;"/></td>
+                           <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc10" formControlName="rc10" style="width: 250px;border: none;"/></td>
+                           <td class="border px-4 py-2" contenteditable="true" ><input type="text" id="rc11" formControlName="rc11" style="width: 250px;border: none;"/></td>
+                           <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc12" formControlName="rc12" style="width: 250px;border: none;"/></td>
+                       </tr>
+                         <tr>
+                           <td class="border px-4 py-2" contenteditable="true" ><input type="date" id="rc13" formControlName="rc13" style="width: 250px;border: none;" /></td>
+                           <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc14" formControlName="rc14" style="width: 250px;border: none;" /></td>
+                           <td class="border px-4 py-2" contenteditable="true" ><input type="text" id="rc15" formControlName="rc15" style="width: 250px;border: none;" /></td>
+                           <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc16" formControlName="rc16" style="width: 250px;border: none;" /></td>
+                       </tr>
+                         <tr>
+                           <td class="border px-4 py-2" contenteditable="true" ><input type="date" id="rc17" formControlName="rc17" style="width: 250px;border: none;" /></td>
+                           <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc18" formControlName="rc18" style="width: 250px;border: none;" /></td>
+                           <td class="border px-4 py-2" contenteditable="true" ><input type="text" id="rc19" formControlName="rc19"  style="width: 250px;border: none;"/></td>
+                           <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc20" formControlName="rc20" style="width: 250px;border: none;"/></td>
+                       </tr>
+         
+                         <tr>
+                           <td class="border px-4 py-2" contenteditable="true" ><input type="date" id="rc21" formControlName="rc21" style="width: 250px;border: none;"/></td>
+                           <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc22" formControlName="rc22" style="width: 250px;border: none;"/></td>
+                           <td class="border px-4 py-2" contenteditable="true" ><input type="text" id="rc23" formControlName="rc23" style="width: 250px;border: none;"/></td>
+                           <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc24" formControlName="rc24" style="width: 250px;border: none;"/></td>
+                       </tr>
+         
+                         <tr>
+                           <td class="border px-4 py-2" contenteditable="true" ><input type="date" id="rc25" formControlName="rc25" style="width: 250px;border: none;"/></td>
+                           <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc26" formControlName="rc26" style="width: 250px;border: none;"/></td>
+                           <td class="border px-4 py-2" contenteditable="true" ><input type="text" id="rc27" formControlName="rc27" style="width: 250px;border: none;"/></td>
+                           <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc28" formControlName="rc28" style="width: 250px;border: none;"/></td>
+                       </tr>
+         
+                         <tr>
+                           <td class="border px-4 py-2" contenteditable="true" ><input type="date" id="rc29" formControlName="rc29" style="width: 250px;border: none;" /></td>
+                           <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc30" formControlName="rc30" style="width: 250px;border: none;"/></td>
+                           <td class="border px-4 py-2" contenteditable="true" ><input type="text" id="rc31" formControlName="rc31" style="width: 250px;border: none;"/></td>
+                           <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc32" formControlName="rc32" style="width: 250px;border: none;"/></td>
+                       </tr>
+         
+                         <tr>
+                           <td class="border px-4 py-2" contenteditable="true" ><input type="date" id="rc33" formControlName="rc33" style="width: 250px;border: none;"/></td>
+                           <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc34" formControlName="rc34" style="width: 250px;border: none;"/></td>
+                           <td class="border px-4 py-2" contenteditable="true" ><input type="text" id="rc35" formControlName="rc35" style="width: 250px;border: none;" /></td>
+                           <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc36" formControlName="rc36" style="width: 250px;"/></td>
+                       </tr>
+         
+                         <tr>
+                           <td class="border px-4 py-2" contenteditable="true" ><input type="date" id="rc37" formControlName="rc37" style="width: 250px;border: none;"/></td>
+                           <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc38" formControlName="rc38" style="width: 250px;border: none;"/></td>
+                           <td class="border px-4 py-2" contenteditable="true" ><input type="text" id="rc39" formControlName="rc39" style="width: 250px;border: none;" /></td>
+                           <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc40" formControlName="rc40" style="width: 250px;border: none;"/></td>
+                       </tr>    
+                   </tbody>
+               </table>
+        <br><br><br><br>
+        <!-- <button type="submit" [disabled]="!formData.valid">Save</button>
+        <div id="b1">
+            <a routerLink="../page12" style="text-decoration: none; color:black; background-color: rgb(255, 252, 252);display: inline-block; vertical-align: top;"><b>P</b></a> 
+             <b id="b2" style="text-decoration: none; color:black; background-color: rgb(243, 237, 237);display: inline-block; vertical-align: top;">13</b>
+            <a  [routerLink]="['../page13', { addictName: formData.get('addictname')?.value }]" style="text-decoration: none; color:black; background-color: rgb(255, 252, 252); display: inline-block; vertical-align: top;"><b>N</b></a> 
+       </div>  -->
+
+       <div>
+        <button type="submit" [disabled]="!formData.valid">Save</button>
+    </div>
+    <!-- <a [routerLink]="['../pg22']"><b>Next</b></a> -->
+    <div id="b1">
+        <a routerLink="../page12"
+            style="text-decoration: none; color:black; background-color: rgb(255, 252, 252); display: inline-block; vertical-align: top;"><b>P</b></a>
+        <b id="b2"
+            style="text-decoration: none; color:black; background-color: rgb(243, 237, 237);display: inline-block; vertical-align: top;">13</b>
+        <a routerLink="../page14"
+            style="text-decoration: none; color:black; background-color: rgb(255, 252, 252); display: inline-block; vertical-align: top;"><b>N</b></a>
+    </div>
+   </form>
+   </div>
+</body>

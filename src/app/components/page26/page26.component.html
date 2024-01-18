@@ -1,0 +1,138 @@
+
+<body>
+    <form action="" [formGroup]="formData" (ngSubmit)="onSubmit()">
+        <h2></h2>
+        <fieldset>
+            <table>
+                <tr>
+                    <th style="width: 60%;">-What is the living arrangement?</th>
+                    <td><input type="radio" name="livarr_26" formControlName="livarr_26"
+                            style="width: unset; vertical-align: middle;" value="yes" />Yes</td>
+                    <td><input type="radio" name="livarr_26" formControlName="livarr_26"
+                            style="width: unset; vertical-align: middle;" value="no" />No</td>
+                </tr>
+                <tr>
+                    <th style="width: 60%;">-Any children?</th>
+                    <td><input type="radio" name="child_26" formControlName="child_26"
+                            style="width: unset; vertical-align: middle;" value="yes" />Yes</td>
+                    <td><input type="radio" name="child_26" formControlName="child_26"
+                            style="width: unset; vertical-align: middle;" value="no" />No</td>
+                </tr>
+                <tr>
+                    <th style="width: 60%;">23. Have you been involved in any high risk sexual activities?</th>
+                    <td><input type="radio" name="highrisk_26" formControlName="highrisk_26"
+                            style="width: unset; vertical-align: middle;" value="yes" />Yes</td>
+                    <td><input type="radio" name="highrisk_26" formControlName="highrisk_26"
+                            style="width: unset; vertical-align: middle;" value="no" />No</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th style="width: 60%; border-top: none;">Sex with commercial sex workers, If yes, did you use
+                        condoms
+                    </th>
+                    <td style="border-top: none;"><input type="radio" name="sx_26" formControlName="sx_26"
+                            value="always" style="width: unset; vertical-align: middle;" />Always</td>
+                    <td style="border-top: none;"><input type="radio" name="sx_26" formControlName="sx_26"
+                            value="sometimes" style="width: unset; vertical-align: middle;" />Sometimes</td>
+                    <td style="border-top: none;"><input type="radio" name="sx_26" formControlName="sx_26" value="never"
+                            style="width: unset; vertical-align: middle;" />Never</td>
+                </tr>
+                <tr>
+                    <th style="width: 60%;">24. Sex with casual acquaintance, If yes, did you use condoms </th>
+                    <td><input type="radio" name="q24_26" formControlName="q24_26"
+                            style="width: unset; vertical-align: middle;" value="always" />Always</td>
+                    <td><input type="radio" name="q24_26" formControlName="q24_26"
+                            style="width: unset; vertical-align: middle;" value="sometimes" />Sometimes</td>
+                    <td><input type="radio" name="q24_26" formControlName="q24_26"
+                            style="width: unset; vertical-align: middle;" value="never" />Never</td>
+                </tr>
+            </table>
+            <h4></h4>
+            <table>
+                <tr>
+                    <th style="width: 60%;">Have you been tested for HIV? If yes,</th>
+                    <td style="text-align: left; padding-left: 10%;"><input type="radio" name="hivtest_26"
+                            style="width: unset; vertical-align: middle;" />Positive<br>
+                        <input type="radio" name="hivtest_26" formControlName="hivtest_26"
+                            style="width: unset; vertical-align: middle;" value=negative />Negative<br>
+                        <input type="radio" name="hivtest_26" formControlName="hivtest_26"
+                            style="width: unset; vertical-align: middle;" value="Not willing to reveal" />Not willing to
+                        reveal<br>
+                        <input type="radio" name="hivtest_26" formControlName="hivtest_26"
+                            style="width: unset; vertical-align: middle;" value="not collected reports" />Not collected
+                        reports<br>
+                        <input type="radio" name="hivtest_26" formControlName="hivtest_26"
+                            style="width: unset; vertical-align: middle;" value="not applicable" />Not applicatble
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <h4></h4>
+        <fieldset>
+            <table>
+                <h3>26. At present do you have any sexual problems?</h3>
+                <tr>
+                    <th style="width: 50%;">Problems</th>
+                    <th>Yes</th>
+                    <th>No</th>
+                </tr>
+
+                <tr>
+                    <td>Reduced libido</td>
+                    <td><input type="radio" name="prob26_1" formControlName="prob26_1"
+                            style="width: unset; vertical-align: middle;" value="yes" /></td>
+                    <td><input type="radio" name="prob26_1" formControlName="prob26_1"
+                            style="width: unset; vertical-align: middle;" value="no" /></td>
+                </tr>
+
+                <tr>
+                    <td>Impotency</td>
+                    <td><input type="radio" name="prob26_2" formControlName="prob26_2"
+                            style="width: unset; vertical-align: middle;" value="yes" /></td>
+                    <td><input type="radio" name="prob26_2" formControlName="prob26_2"
+                            style="width: unset; vertical-align: middle;" value="no" /></td>
+                </tr>
+
+                <tr>
+                    <td>Excessive sexual urge</td>
+                    <td><input type="radio" name="prob26_3" formControlName="prob26_3"
+                            style="width: unset; vertical-align: middle;" value="yes" /></td>
+                    <td><input type="radio" name="prob26_3" formControlName="prob26_3"
+                            style="width: unset; vertical-align: middle;" value="no" /></td>
+                </tr>
+
+                <tr>
+                    <td>Complete abstinence</td>
+                    <td><input type="radio" name="prob26_4" formControlName="prob26_4"
+                            style="width: unset; vertical-align: middle;" value="yes" /></td>
+                    <td><input type="radio" name="prob26_4" formControlName="prob26_4"
+                            style="width: unset; vertical-align: middle;" value="no" /></td>
+                </tr>
+
+                <tr>
+                    <td>Any other</td>
+                    <td><input type="radio" name="prob26_5" formControlName="prob26_5"
+                            style="width: unset; vertical-align: middle;" value="yes" /></td>
+                    <td><input type="radio" name="prob26_5" formControlName="prob26_5"
+                            style="width: unset; vertical-align: middle;" value="no" /></td>
+                </tr>
+            </table>
+
+        </fieldset>
+
+        <div>
+            <button type="submit" [disabled]="!formData.valid">Save</button>
+        </div>
+        <h3></h3>
+        <div id="b1">
+            <a routerLink="../page25"
+                style="text-decoration: none; color:black; background-color: rgb(255, 252, 252); display: inline-block; vertical-align: top;"><b>P</b></a>
+            <b id="b2"
+                style="text-decoration: none; color:black; background-color: rgb(243, 237, 237);display: inline-block; vertical-align: top;">26</b>
+                <a routerLink="../page27" style="text-decoration: none; color:black; background-color: rgb(255, 252, 252); display: inline-block; vertical-align: top;"><b>N</b></a>
+        
+            </div>
+
+    </form>
+</body>
