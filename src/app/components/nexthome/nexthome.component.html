@@ -140,13 +140,30 @@
         .details {
             margin-left: 10px;
         }
+
+        /* Added styles for the download button */
+        button.download-btn {
+            position: fixed;
+            bottom: 40px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button.download-btn:hover {
+            background-color: #555;
+        }
     </style>
 </head>
 
 <body>
 
     <header>
-        <img src="assets/finalimage.jpg"  style="opacity: 90%;" alt="IRCA Logo" width="210px" height="100px">
+        <img src="assets/finalimage.jpg" style="opacity: 90%;" alt="IRCA Logo" width="210px" height="100px">
         <h1>Integrated Rehabilitation Center for Addicts</h1>
     </header>
 
@@ -211,67 +228,39 @@
         </div>
     </main>
 
-    <!-- ... (existing input and search content) -->
-    <!-- <div>
-        <input type="text" [(ngModel)]="inputValue" placeholder="New Patient Reg ID">
-        <input type="text" [(ngModel)]="nameValue" placeholder="New Patient Name">
-        <button (click)="createNgo()">Create New</button>
-    </div> -->
-
-    
-
-
     <div style="display: flex;">
         <input type="text" [(ngModel)]="inputValue" placeholder="New Patient Reg ID" style="margin-right: 10px;" id="newreg">
         <input type="text" [(ngModel)]="nameValue" placeholder="New Patient Name" style="margin-right: 10px;" id="newname">
         <button (click)="createNgo()">Add new Patient</button>
     </div>
     
-    <button (click)="downloadCSV()">Download</button>
+    <!-- Download button with the new styles -->
+    <button class="download-btn" (click)="downloadCSV()">Download Patient Details</button>
 
     <br><br><br><br>
     <h3>Search for Patient:</h3>
     <input type="text" [(ngModel)]="searchTerm" placeholder="Search Addict Names" (ngModelChange)="filterAddictDets()" id="searchpat" />
 
-<!-- Display retrieved addict details based on search -->
-<!-- <div *ngIf="retrievedData && retrievedData.length > 0">
-    <h3>Retrieved Addict Details:</h3>
-    <div class="addict-details-container">
-      <div *ngFor="let addictDetails of searchedNames" class="addict-details">
-        <img [src]="addictDetails.photo" alt="Addict Photo" width="50" height="50">
-        <div class="details">
-          <p><strong>Registration ID:</strong> {{ addictDetails.addictName }}</p>
-          <p><strong>Patient Name:</strong> {{ addictDetails.patientName }}</p>
+    <!-- Display retrieved addict details based on search -->
+    <div *ngIf="retrievedData && retrievedData.length > 0">
+        <h3 style="margin-bottom: 10px;">Patient Details:</h3>
+        <div class="addict-details-container" style="display: flex; flex-wrap: wrap; gap: 20px;">
+            <div *ngFor="let addictDetails of searchedNames" class="addict-details" style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; width: 300px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                <img [src]="addictDetails.photo" alt="Addict Photo" width="50" height="50" style="border-radius: 50%; margin-right: 10px;">
+                <div class="details">
+                    <p style="margin-bottom: 5px;"><strong>Registration ID:</strong> {{ addictDetails.addictName }}</p>
+                    <p style="margin-bottom: 5px;"><strong>Patient Name:</strong> {{ addictDetails.patientName }}</p>
+                </div>
+                <button style="margin-left: 10px; padding: 5px 10px; background-color: #ddd; color: #333; border: 1px solid #ccc; border-radius: 3px; cursor: pointer;" (click)="editDetails(addictDetails.addictName)">Edit Details</button>
+            </div>
         </div>
-        <button style="margin-left: 10px;" (click)="editDetails(addictDetails.addictName)">Edit Details</button>
-      </div>
     </div>
-  </div> -->
-  <div *ngIf="retrievedData && retrievedData.length > 0">
-    <h3 style="margin-bottom: 10px;">Patient Details:</h3>
-    <div class="addict-details-container" style="display: flex; flex-wrap: wrap; gap: 20px;">
-  
-      <div *ngFor="let addictDetails of searchedNames" class="addict-details" style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; width: 300px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-        <img [src]="addictDetails.photo" alt="Addict Photo" width="50" height="50" style="border-radius: 50%; margin-right: 10px;">
-        <div class="details">
-          <p style="margin-bottom: 5px;"><strong>Registration ID:</strong> {{ addictDetails.addictName }}</p>
-          <p style="margin-bottom: 5px;"><strong>Patient Name:</strong> {{ addictDetails.patientName }}</p>
-        </div>
-        <button style="margin-left: 10px; padding: 5px 10px; background-color: #ddd; color: #333; border: 1px solid #ccc; border-radius: 3px; cursor: pointer;" (click)="editDetails(addictDetails.addictName)">Edit Details</button>
-      </div>
-  
-    </div>
-  </div>
-  
-  
-  <div *ngIf="!retrievedData || retrievedData.length === 0">
-    <p>No addict details found.</p>
-  </div>
-  <br><br>
 
-  <!-- <button (click)="downloadCSV()">Download</button> -->
-  
-    
+    <div *ngIf="!retrievedData || retrievedData.length === 0">
+        <p>No addict details found.</p>
+    </div>
+    <br><br>
+
     <footer>
         &copy; 2024 Integrated Rehabilitation Center for Addicts
     </footer>

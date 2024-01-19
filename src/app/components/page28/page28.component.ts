@@ -15,27 +15,27 @@ export class Page28Component {
   addictName: string;
   displayedImages: SafeUrl[] = [];
   formData: FormGroup = this.fb.group({
-    law:[''],
-    law1:[''],
-    other:[''],
-    z81:[''],
-    z82:[''],
-    z83:[''],
-    z84:[''],
-    z85:[''],
-    z86:[''],
-    z87:[''],
-    z88:[''],
-    z89:[''],
-    z90:[''],
-    z91:[''],
-    z92:[''],
-    z93:[''],
-    z94:[''],
-    z95:[''],
-    temple1:[''],
-    pilgrimage1:[''],
-    festival1:['']
+    law_28:[''],
+    law1_28:[''],
+    other_28:[''],
+    game_28:[''],
+    game1_28:[''],
+    exercise_28:[''],
+    exercise1_28:[''],
+    movie_28:[''],
+    movie1_28:[''],
+    tv_28:[''],
+    tv1_28:[''],
+    reading_28:[''],
+    reading1_28:[''],
+    frds_28:[''],
+    frds1_28:[''],
+    hobby_28:[''],
+    hobby1_28:[''],
+    belief_28:[''],
+    temple1_28:[''],
+    pilgrimage1_28:[''],
+    festival1_28:['']
   });
 
 

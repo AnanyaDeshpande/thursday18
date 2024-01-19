@@ -17,15 +17,15 @@ export class Page12Component {
   displayedImages: SafeUrl[] = [];
     formData: FormGroup = this.fb.group({
   
-      fourthname: [''],
-      age : [''],
-      dateofad : [''],
-      his : [''],
-      phy : [''],
-      past : [''],
-      psyc : [''],
-      with : [''],
-      tre : [''],
+      name_12: [''],
+      age_12 : [''],
+      dateofad_12 : [''],
+      hist_12 : [''],
+      Physical_12 : [''],
+      past_hist_12 : [''],
+      psyc_prob_12 : [''],
+      withdrawal_symp_12 : [''],
+      treat_12: [''],
   
     });
 
